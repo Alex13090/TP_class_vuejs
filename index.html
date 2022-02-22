@@ -17,15 +17,23 @@
             background-color: rgb(255, 47, 193);
             color: yellowgreen;
         }
+
+        .display {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body id="app">
     <h1 class="text-center mb-5">Styles</h1>
-    <input type="text" class="mb-5" @keyup="getInputValue($event)">
-    <p class="mb-5" :class="{hello: inputValue, world : inputValue}">Hello World (class dynamique)</p>
-    <input type="text" class="mb-5" @keyup="getInputValue($event)">
-    <p class="mb-5" :style="{backgroundColor : '{inputValue}'}">Hello World (couleur dynamique)</p>
-    <button class="btn btn-primary" @click="display">Afficher 1er titre</button>
+    <input type="text" class="mb-5" v-model="inputValue1">
+    <p class="mb-5" :class="allClass">Hello World (class dynamique)</p>
+    <input type="text" class="mb-5" v-model="inputValue2">
+    <p class="mb-5" :style="{backgroundColor : inputValue2}">Hello World (couleur dynamique)</p>
+    <button class="btn btn-primary" @click="show()">Afficher 1er titre</button>
 
     <script src="https://unpkg.com/vue@next"></script>
     <script src="index.js"></script>
