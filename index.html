@@ -22,7 +22,7 @@
 <body id="app">
     <h1 class="text-center mb-5">Styles</h1>
     <input type="text" class="mb-5" @keyup="getInputValue($event)">
-    <p class="mb-5" :class="{inputValue}">Hello World (class dynamique)</p>
+    <p class="mb-5" :class="{hello: inputValue, world : inputValue}">Hello World (class dynamique)</p>
     <input type="text" class="mb-5" @keyup="getInputValue($event)">
     <p class="mb-5" :style="{backgroundColor : '{inputValue}'}">Hello World (couleur dynamique)</p>
     <button class="btn btn-primary" @click="display">Afficher 1er titre</button>
