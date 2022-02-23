@@ -27,12 +27,12 @@
         }
     </style>
 </head>
-<body id="app">
+<body id="app" class="m-5">
     <h1 class="text-center mb-5">Styles</h1>
-    <input type="text" class="mb-5" v-model="inputValue1">
-    <p class="mb-5" :class="allClass">Hello World (class dynamique)</p>
-    <input type="text" class="mb-5" v-model="inputValue2">
-    <p class="mb-5" :style="{backgroundColor : inputValue2}">Hello World (couleur dynamique)</p>
+    <input type="text" class="mb-3 w-25" v-model="inputValue1">
+    <p class="mb-3" :class="allClass">Hello World (class dynamique)</p>
+    <input type="text" class="mb-3 w-25" v-model="inputValue2">
+    <p class="mb-3" :style="{backgroundColor : inputValue2}">Hello World (couleur dynamique)</p>
     <button class="btn btn-primary" @click="show()">Afficher 1er titre</button>
 
     <script src="https://unpkg.com/vue@next"></script>
